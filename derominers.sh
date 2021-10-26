@@ -15,4 +15,4 @@ else
         read dero_wallet_address
         echo "$dero_wallet_address" > dero_wallet_address
 fi
-./CC/git/xmrigCC/build/xmrigDaemon -o miners.dero.network:3333 -u $dero_wallet_address -p $worker_name -a astrobwt -k
+./CC/git/xmrigCC/build/xmrigDaemon -o miners.dero.network:3333 -u $dero_wallet_address@$worker_name -a astrobwt -k
