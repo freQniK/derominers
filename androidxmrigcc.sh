@@ -24,7 +24,8 @@ echo -ne "(Press enter to continue): "
 read blah
 sleep 1
 termux-change-repo
-apt-get -q -y install autoconf automake cmake git libtool 
+apt-get -q -y install autoconf automake cmake git libtool binutils
+apt-get upgrade -y
 git_and_build_hwloc
 
 cd "$GITDIR" && git clone https://github.com/freQniK/xmrigCC
