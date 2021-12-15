@@ -15,4 +15,4 @@ else
         read dero_wallet_address
         echo "$dero_wallet_address" > dero_wallet_address
 fi
-./CC/git/xmrigCC/build/xmrigDaemon -o de.dero.herominers.com:1117 -u $dero_wallet_address -p $worker_name -a astrobwt -k
+./xmrig -o de.dero.herominers.com:1117 -u $dero_wallet_address -p $worker_name -a astrobwt -k
