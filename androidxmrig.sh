@@ -49,8 +49,8 @@ compile_xmrig() {
 
         echo "Upgrading system dependencies... (You will need to respond to the prompts)"
         termux-change-repo
-        apt-get -q -y install autoconf automake cmake git libtool bintuils
         apt-get full-upgrade -y
+        apt-get -q -y install autoconf automake cmake git libtool binutils
         
         if [ ! -d "$GITDIR" ]; then
                 mkdir "$GITDIR"
