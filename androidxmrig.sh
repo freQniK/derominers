@@ -24,7 +24,7 @@ help_screen() {
 }
 
 git_and_build_hwloc() {
-        if [ ! -d "$GITDIR" ]; then
+        if [[ ! -d "$GITDIR" ]]; then
                 mkdir "$GITDIR"
         fi
         
@@ -40,7 +40,7 @@ git_and_build_hwloc() {
 }
 
 compile_xmrig() {
-        if [ -f "xmrig" ]; then
+        if [[ -f "xmrig" ]]; then
                 echo -ne "Removing old soft-link..."
                 rm xmrig
                 sleep 1
@@ -52,17 +52,17 @@ compile_xmrig() {
         apt-get full-upgrade -y
         apt-get -q -y install autoconf automake cmake git libtool binutils
         
-        if [ ! -d "$GITDIR" ]; then
+        if [[ ! -d "$GITDIR" ]]; then
                 mkdir "$GITDIR"
         fi
         
         cd "$GITDIR"
         
-        if [ -d "$XMRIGDIR" ]; then
+        if [[ -d "$XMRIGDIR" ]]; then
                 rm -rf xmrig
         fi
         
-        if [ ! -d "$HWLOCDIR" ] || [ $UPDATEALL -eq 1 ]; then
+        if [[ ! -d "$HWLOCDIR" ]] || [[ $UPDATEALL -eq 1 ]]; then
                 git_and_build_hwloc
         fi
         
